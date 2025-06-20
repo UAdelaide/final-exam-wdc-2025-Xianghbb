@@ -77,6 +77,7 @@ app.get('/api/walkers/summary', async (req, res) => {
             ELSE NULL
             END as average_rating,
             COUNT(DISTINCT CASE WHEN wreq.status='completed' THEN wa.request_id END) as completed_walks
-            `)
+            FROM Users u
+            LEFT JOIN Walk`)
     }
 });
