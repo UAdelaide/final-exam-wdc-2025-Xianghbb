@@ -76,6 +76,6 @@ app.get('/api/walkers/summary', async (req, res) => {
             WHEN COUNT(WR.RATING_ID)>0 THEN ROUND(AVG(wr.rating), 1)
             ELSE NULL
             END as average_rating,
-            COUNT(DISTINCT CASE WHEN wreq.status='completed' THEN)`)
+            COUNT(DISTINCT CASE WHEN wreq.status='completed' THEN wa.request_id END)`)
     }
 });
