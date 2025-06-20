@@ -29,4 +29,5 @@ let db;
     }
 })();
 
-// get /api/dogs
+// get /api/dogs, return all dogs with their size and owner's username
+app.get('')
