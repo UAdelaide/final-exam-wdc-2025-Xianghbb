@@ -30,4 +30,8 @@ let db;
 })();
 
 // get /api/dogs, return all dogs with their size and owner's username
-app.get('/api/dogs', async (req, res) )
+app.get('/api/dogs', async (req, res) => {
+    try {
+        const [rows]=await
+    }
+})
