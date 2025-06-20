@@ -45,7 +45,7 @@
         <button type="button" @click="step=1">Step 1: Ready?</button>
         <button type="button" v-if="step===1" @click="'fetchDog">Step 2: Show me!</button>
 
-        <img :src="dogUrl" alt="" class="dog-img">
+        <img :src="dogUrl" alt="photo of dog of the Day" class="dog-img">
     </div>
     <script>
         const { createApp } = Vue;
