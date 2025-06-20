@@ -25,6 +25,6 @@ let db;
 
         console.log('Connect to DogWalkService database');
     } catch (err) {
-        console.error()
+        console.error('Error connecting to database, ensure MYSQL ')
     }
 })
