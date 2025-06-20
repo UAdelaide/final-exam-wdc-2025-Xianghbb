@@ -92,6 +92,8 @@ app.get('/api/walkers/summary', async (req, res) => {
                 total_ratings: parseInt(row.total_ratings),
                 average_rating: row.average_rating ? parseFloat(row.average_rating) : null,
                 completed_walks: parseInt(row.completed_walks)
-            }))
+            }));
+
+            res.json(formattedRows);
     }
 });
