@@ -87,7 +87,7 @@ app.get('/api/walkers/summary', async (req, res) => {
         `);
 
         // convert numeric strings to numbers for consistency
-        const formattedRows=rows.map(row => ({
+        const formattedRows=rows.map((row) => ({
             walker_username: row.walker_username,
             total_ratings: parseInt(row.total_ratings),
             average_rating: row.average_rating ? parseFloat(row.average_rating) : null,
@@ -97,8 +97,10 @@ app.get('/api/walkers/summary', async (req, res) => {
         res.json(formattedRows);
     } catch (error) {
         console.error('Error fetching walker summary:', error);
-        res.status(500).json({ error:'Internal server error' });
+        res.status(500).json({ error: 'Internal server error' });
     }
 });
 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
+
+module.exports=app;
