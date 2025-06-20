@@ -15,6 +15,9 @@ let db;
 
 (async() => {
     try {
-        // connect to 
+        // connect to database
+        db=await mysql.createConnection({
+            
+        })
     }
 })
