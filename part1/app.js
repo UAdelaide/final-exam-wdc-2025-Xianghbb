@@ -17,10 +17,10 @@ let db;
     try {
         // connect to database
         db=await mysql.createConnection({
-            host:'localhost',
-            user:'root',
-            password:'',
-            database:'DogWalkService'
+            host: 'localhost',
+            user: 'root',
+            password: '',
+            database: 'DogWalkService'
         });
 
         console.log('Connect to DogWalkService database');
