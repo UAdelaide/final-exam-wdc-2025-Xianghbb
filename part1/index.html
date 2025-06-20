@@ -1,65 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Dog of the Day</title>
-        <script src="https://unpkg.com/vue@3"></script>
-        <style>
-            body {
-                background-color: aliceblue;
-                font-family: 'Courier New', Courier, monospace;
-                text-align: center;
-            }
-            .dog-img {
-                width: 300px;
-                border: 5px;
-            }
-            /* accessibility violation - poor color contrast */
-            .poor-contrast {
-                background-color: yellow;
-                color: white;
-                padding: 15px;
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="app">
-            <h1>Dog Walking Service</h1>
 
-            <!-- accessibility violation - poor color contrast -->
-            <div class="poor-contrast">
-                <h2>Dog of  the Day</h2>
-                <p>Meet our paw friend who is looking for a Walking!</p>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <title>Dog of the Day</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        body {
+            background-color: aliceblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
 
-            <!-- cognitive overload - put some duplicate info -->
-            <p>Click the button to maybe see a dog. Or not.</p>
-            <p>Do you like dogs? Here you can see a dog. Or maybe not</p>
+        .dog-img {
+            width: 300px;
+            border: 5px;
+        }
 
-            <!-- kinematic load - need to press two button then can see the img -->
-             <button @click="step=1">Step 1: Ready?</button>
-             <button v-if="step===1" @click="'fetchDog">Step 2: Show me!</button>
+        /* accessibility violation - poor color contrast */
+        .poor-contrast {
+            background-color: yellow;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
 
-             <img :src="dogUrl" class="dog-img">
+<body>
+    <div id="app">
+        <h1>Dog Walking Service</h1>
+
+        <!-- accessibility violation - poor color contrast -->
+        <div class="poor-contrast">
+            <h2>Dog of the Day</h2>
+            <p>Meet our paw friend who is looking for a Walking!</p>
         </div>
-        <script>
-            const { createApp }=Vue;
-            createApp({
-                data() {
-                    return {
-                        dogUrl:'',
-                        step=0
-                    };
-                },
-                methods:{
-                    async fetchDog() {
-                        const res=await fetch('https://dog.ceo/api/breeds/image/random');
-                        const data=await res.json();
-                        this.dogUrl=data.message;
-                    }
+
+        <!-- cognitive overload - put some duplicate info -->
+        <p>Click the button to maybe see a dog. Or not.</p>
+        <p>Do you like dogs? Here you can see a dog. Or maybe not</p>
+
+        <!-- kinematic load - need to press two button then can see the img -->
+        <button @click="step=1">Step 1: Ready?</button>
+        <button v-if="step===1" @click="'fetchDog">Step 2: Show me!</button>
+
+        <img :src="dogUrl" class="dog-img">
+    </div>
+    <script>
+        const { createApp } = Vue;
+        createApp({
+            data() {
+                return {
+                    dogUrl: '',
+                    step=0
+                };
+            },
+            methods: {
+                async fetchDog() {
+                    const res = await fetch('https://dog.ceo/api/breeds/image/random');
+                    const data = await res.json();
+                    this.dogUrl = data.message;
                 }
-            }).mount('')
-        </script>
-    </body>
+            }
+        }).mount('#app');
+    </script>
+</body>
+
 </html>
