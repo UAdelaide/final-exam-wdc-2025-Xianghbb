@@ -58,7 +58,9 @@ app.get('/api/walkrequests/open', async (req, res) => {
             ORDER BY wr.requested_time
             `);
 
-            res
+            res.json(rows);
+    } catch (error) {
+        con
     }
 });
 
