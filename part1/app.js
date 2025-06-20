@@ -46,4 +46,5 @@ app.get('/api/dogs', async (req, res) => {
     }
 });
 
-// get /api/walkrequests/open
+// get /api/walkrequests/open, return all open requests
+app.get()
