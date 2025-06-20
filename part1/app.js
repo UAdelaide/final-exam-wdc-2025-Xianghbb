@@ -29,4 +29,4 @@ let db;
     }
 })();
 
-// 
+// get /api/dogs
