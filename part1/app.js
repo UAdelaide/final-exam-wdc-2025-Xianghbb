@@ -17,6 +17,8 @@ let db;
     try {
         // connect to database
         db=await mysql.createConnection({
+            host='localhost',
+            user:'root',
             
         })
     }
