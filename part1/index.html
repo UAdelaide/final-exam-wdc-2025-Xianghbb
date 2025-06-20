@@ -42,8 +42,8 @@
         <p>Do you like dogs? Here you can see a dog. Or maybe not</p>
 
         <!-- kinematic load - need to press two button then can see the img -->
-        <button @click="step=1">Step 1: Ready?</button>
-        <button v-if="step===1" @click="'fetchDog">Step 2: Show me!</button>
+        <button type="button" @click="step=1">Step 1: Ready?</button>
+        <button type="button" v-if="step===1" @click="'fetchDog">Step 2: Show me!</button>
 
         <img :src="dogUrl" class="dog-img">
     </div>
