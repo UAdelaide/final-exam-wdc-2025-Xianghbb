@@ -73,6 +73,6 @@ app.get('/api/walkers/summary', async (req, res) => {
             u.username as walker_username,
             COUNT(wr.rating_id) as total_ratings,
             CASE
-            `)
+            WHEN COUNT(WR.RATING_ID)>0 `)
     }
 });
