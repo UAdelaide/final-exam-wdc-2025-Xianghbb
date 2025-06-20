@@ -95,5 +95,7 @@ app.get('/api/walkers/summary', async (req, res) => {
         }));
 
         res.json(formattedRows);
-    } catch (error) {}
+    } catch (error) {
+        console.error('')
+    }
 });
