@@ -103,4 +103,7 @@ app.get('/api/walkers/summary', async (req, res) => {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+// start the server
+console.Consolelog
+
 module.exports=app;
