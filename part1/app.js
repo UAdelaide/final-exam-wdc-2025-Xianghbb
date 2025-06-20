@@ -107,10 +107,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.listen(port, () => {
     console.log(`Dog Walking Service API listening on port ${port}`);
     console.log('Available endpoints:');
-    console.log(`  GET http://localhost:${port}/api/dogs`);
-    console.log(`  GET http://localhost:${port}/api/walkrequests/open`);
-    console.log(`  GET http://localhost:${port}/api/walkers/summary`);
-}); 
+    console.log(`  GET http://localhost:3000/api/dogs`);
+    console.log(`  GET http://localhost:3000/api/walkrequests/open`);
+    console.log(`  GET http://localhost:3000/api/walkers/summary`);
+});
 
 
 module.exports=app;
