@@ -60,7 +60,8 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
             res.json(rows);
     } catch (error) {
-        console.error('Error fetching open walk requests:')
+        console.error('Error fetching open walk requests:', error);
+        res
     }
 });
 
