@@ -52,8 +52,10 @@
             } else if (data.user.role === 'walker') {
               window.location.herf='walker-dashboard.html';
             } else {
-              throw new Error
+              throw new Error('Unknow role');
             }
+          } catch (err) {
+            error
           }
         }
       }
