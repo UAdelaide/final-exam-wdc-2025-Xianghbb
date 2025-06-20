@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 // session middleware
 app.use(session({
-    secret: ''
+    secret: 'dogwalk-secret123'
 }))
 
 // Routes
