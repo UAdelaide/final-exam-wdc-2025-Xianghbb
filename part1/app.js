@@ -24,5 +24,7 @@ let db;
         });
 
         console.log('Connect to DogWalkService database');
+    } catch (err) {
+        console.error()
     }
 })
