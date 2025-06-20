@@ -88,7 +88,8 @@ app.get('/api/walkers/summary', async (req, res) => {
 
             // convert numeric strings to numbers for consistency
             const formattedRows=rows.map(row => ({
-                walker
+                walker_username: row.walker_username,
+                total_ratings: 
             }))
     }
 });
