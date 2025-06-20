@@ -47,7 +47,9 @@
             const data=await res.json();
             if (!res.ok) throw new Error(data.error || 'Login failed');
 
-            if (data.user.role === 'owner')
+            if (data.user.role === 'owner') {
+              window.location.herf='ow'
+            }
           }
         }
       }
