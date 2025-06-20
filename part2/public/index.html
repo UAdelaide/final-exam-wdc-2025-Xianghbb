@@ -32,30 +32,30 @@
     const { createApp, ref } = Vue;
     createApp({
       setup() {
-        const email=ref('');
-        const password=ref('');
-        const error=ref('');
+        const email = ref('');
+        const password = ref('');
+        const error = ref('');
 
         async function submitLogin() {
-          try{
-            const res=await fetch('/api/users/login', {
-              method:'POST',
-              headers:{ 'Content-Type': 'application/json' },
+          try {
+            const res = await fetch('/api/users/login', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ email: email.value, password: password.value })
             });
 
-            const data=await res.json();
+            const data = await res.json();
             if (!res.ok) throw new Error(data.error || 'Login failed');
 
             if (data.user.role === 'owner') {
-              window.location.herf='owner-dashboard.html';
+              window.location.herf = 'owner-dashboard.html';
             } else if (data.user.role === 'walker') {
-              window.location.herf='walker-dashboard.html';
+              window.location.herf = 'walker-dashboard.html';
             } else {
               throw new Error('Unknow role');
             }
           } catch (err) {
-            error.value=err.message;
+            error.value = err.message;
           }
         }
         return { email, password, error, submitLogin };
