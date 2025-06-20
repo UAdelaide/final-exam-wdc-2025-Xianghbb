@@ -105,7 +105,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // start the server
 app.listen(3000, () => {
-    console.log(`Dog Walking Service API listening on port ${port}`);
+    console.log(`Dog Walking Service API listening on port 3000`);
     console.log('Available endpoints:');
     console.log(`  GET http://localhost:3000/api/dogs`);
     console.log(`  GET http://localhost:3000/api/walkrequests/open`);
