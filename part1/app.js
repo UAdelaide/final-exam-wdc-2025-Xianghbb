@@ -51,4 +51,4 @@ app.get('/api/walkrequests/open', async (req, res) => {
     try
 });
 
-// get 
+// get /api/walkers/summary, return summary of each walker
