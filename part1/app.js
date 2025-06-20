@@ -33,6 +33,7 @@ let db;
 app.get('/api/dogs', async (req, res) => {
     try {
         const [rows]=await db.execute(`
+            SELECT d.name as dog_name, d.size, u.username as owner_username
             `)
     }
 })
