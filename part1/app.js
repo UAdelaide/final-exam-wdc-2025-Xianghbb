@@ -104,11 +104,13 @@ app.get('/api/walkers/summary', async (req, res) => {
 app.use(express.static(path.join(__dirname, 'public')));
 
 // start the server
-app.listen(port)
-console.log(`Dog Walking Service API listening on port ${port}`);
+app.listen(port, () => {
+    console.log(`Dog Walking Service API listening on port ${port}`);
 console.log('Available endpoints:');
 console.log(`  GET http://localhost:${port}/api/dogs`);
 console.log(`  GET http://localhost:${port}/api/walkrequests/open`);
 console.log(`  GET http://localhost:${port}/api/walkers/summary`);
+})
+
 
 module.exports=app;
