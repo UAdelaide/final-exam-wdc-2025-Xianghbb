@@ -84,16 +84,16 @@ app.get('/api/walkers/summary', async (req, res) => {
             WHERE u.role='walker'
             GROUP BY u.user_id, u.username
             ORDER BY u.username
-            `);
+        `);
 
-            // convert numeric strings to numbers for consistency
-            const formattedRows=rows.map(row => ({
-                walker_username: row.walker_username,
-                total_ratings: parseInt(row.total_ratings),
-                average_rating: row.average_rating ? parseFloat(row.average_rating) : null,
-                completed_walks: parseInt(row.completed_walks)
-            }));
+        // convert numeric strings to numbers for consistency
+        const formattedRows=rows.map(row => ({
+            walker_username: row.walker_username,
+            total_ratings: parseInt(row.total_ratings),
+            average_rating: row.average_rating ? parseFloat(row.average_rating) : null,
+            completed_walks: parseInt(row.completed_walks)
+        }));
 
-            res.json(formattedRows);
+        res.json(formattedRows);
     } catch (error)
 });
