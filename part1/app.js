@@ -82,7 +82,8 @@ app.get('/api/walkers/summary', async (req, res) => {
             LEFT JOIN WalkRequests wreq ON wa.request_id=wreq.request_id
             LEFT JOIN WalkRatings wr ON wa.request_id=wr.request_id AND wa.walker_id=wr.walker_id
             WHERE u.role='walker'
-            GROU[ N]
+            GROUP BY u.user_id, u.username
+            ORDER BY
             `)
     }
 });
