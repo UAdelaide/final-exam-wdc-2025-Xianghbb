@@ -45,7 +45,13 @@
         </div>
         <script>
             const { createApp }=Vue;
-            createApp
+            createApp({
+                data() {
+                    return {
+                        dogUrl:''
+                    }
+                }
+            })
         </script>
     </body>
 </html>
