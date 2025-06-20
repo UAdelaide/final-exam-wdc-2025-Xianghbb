@@ -55,9 +55,10 @@
               throw new Error('Unknow role');
             }
           } catch (err) {
-            error
+            error.value=err.message;
           }
         }
+        return {email, password, err}
       }
       data() {
         return {
