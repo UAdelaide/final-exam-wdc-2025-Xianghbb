@@ -80,7 +80,7 @@ app.get('/api/walkers/summary', async (req, res) => {
             FROM Users u
             LEFT JOIN WalkApplications wa ON u.user_id=wa.walker_id AND wa.status='accepted'
             LEFT JOIN WalkRequests wreq ON wa.request_id=wreq.request_id
-            LEFT JOIN WalkRatings wr ON wa
+            LEFT JOIN WalkRatings wr ON wa.request_id=wr.request_id AND 
             `)
     }
 });
