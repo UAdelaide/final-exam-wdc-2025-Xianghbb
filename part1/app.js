@@ -90,7 +90,8 @@ app.get('/api/walkers/summary', async (req, res) => {
             const formattedRows=rows.map(row => ({
                 walker_username: row.walker_username,
                 total_ratings: parseInt(row.total_ratings),
-                average_rating: row.average_rating ? parseFloat
+                average_rating: row.average_rating ? parseFloat(row.average_rating) : null,
+                
             }))
     }
 });
