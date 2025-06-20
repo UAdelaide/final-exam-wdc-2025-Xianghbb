@@ -100,3 +100,5 @@ app.get('/api/walkers/summary', async (req, res) => {
         res.status(500).json({ error:'Internal server error' });
     }
 });
+
+app.use(express)
