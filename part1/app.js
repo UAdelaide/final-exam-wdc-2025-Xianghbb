@@ -96,6 +96,7 @@ app.get('/api/walkers/summary', async (req, res) => {
 
         res.json(formattedRows);
     } catch (error) {
-        console.error('')
+        console.error('Error fetching walker summary:', error);
+        res
     }
 });
