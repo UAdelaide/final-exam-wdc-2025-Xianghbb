@@ -23,6 +23,6 @@ let db;
             database:'DogWalkService'
         });
 
-        console.log()
+        console.log('Connect to DogWalkService database');
     }
 })
