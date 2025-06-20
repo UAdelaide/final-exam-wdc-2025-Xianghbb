@@ -70,6 +70,9 @@ app.get('/api/walkers/summary', async (req, res) => {
     try {
         const [rows]=await db.execute(`
             SELECT
-            u.username as walker_username,`)
+            u.username as walker_username,
+            COUNT(wr.rating_id) as total_ratings,
+            CASE
+            `)
     }
 });
