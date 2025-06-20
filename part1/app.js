@@ -110,7 +110,7 @@ app.listen(port, () => {
     console.log(`  GET http://localhost:${port}/api/dogs`);
     console.log(`  GET http://localhost:${port}/api/walkrequests/open`);
     console.log(`  GET http://localhost:${port}/api/walkers/summary`);
-});
+}); 
 
 
 module.exports=app;
