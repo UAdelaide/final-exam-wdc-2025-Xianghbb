@@ -61,7 +61,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
             res.json(rows);
     } catch (error) {
         console.error('Error fetching open walk requests:', error);
-        res.status(500).json({ error: 'Internet server error '})
+        res.status(500).json({ error: 'Internet server error ' });
     }
 });
 
