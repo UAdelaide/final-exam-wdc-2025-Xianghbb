@@ -49,7 +49,8 @@ app.get('/api/dogs', async (req, res) => {
 // get /api/walkrequests/open, return all open requests
 app.get('/api/walkrequests/open', async (req, res) => {
     try {
-        const [rows]=await
+        const [rows]=await db.execute(`
+            S`)
     }
 });
 
