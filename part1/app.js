@@ -105,6 +105,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // start the server
 console.log(`Dog Walking Service API listening on port ${port}`);
-console.log('Available')
+console.log('Available endpoints:');
+console.log(`  `)
 
 module.exports=app;
