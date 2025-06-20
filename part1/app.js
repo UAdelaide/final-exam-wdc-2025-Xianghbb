@@ -27,4 +27,6 @@ let db;
     } catch (err) {
         console.error('Error connecting to database, ensure MYSQL is running: service mysql start', err);
     }
-})
+})();
+
+// 
