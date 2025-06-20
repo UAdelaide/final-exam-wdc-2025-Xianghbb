@@ -87,6 +87,8 @@ app.get('/api/walkers/summary', async (req, res) => {
             `);
 
             // convert numeric strings to numbers for consistency
-            const formattedRows=rows
+            const formattedRows=rows.map(row => ({
+                walker
+            }))
     }
 });
