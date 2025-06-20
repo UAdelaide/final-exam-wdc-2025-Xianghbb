@@ -46,4 +46,4 @@ app.get('/api/dogs', async (req, res) => {
     }
 });
 
-// get 
+// get /api/walkrequests/open
