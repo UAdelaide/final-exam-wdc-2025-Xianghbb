@@ -79,7 +79,7 @@ app.get('/api/walkers/summary', async (req, res) => {
             COUNT(DISTINCT CASE WHEN wreq.status='completed' THEN wa.request_id END) as completed_walks
             FROM Users u
             LEFT JOIN WalkApplications wa ON u.user_id=wa.walker_id AND wa.status='accepted'
-            LEFT JOIN WalkRequests wreq ON wa.request_
+            LEFT JOIN WalkRequests wreq ON wa.request_id=wreq
             `)
     }
 });
