@@ -97,6 +97,6 @@ app.get('/api/walkers/summary', async (req, res) => {
         res.json(formattedRows);
     } catch (error) {
         console.error('Error fetching walker summary:', error);
-        res.status(500).json({ error})
+        res.status(500).json({ error:'Internal server error' });
     }
 });
