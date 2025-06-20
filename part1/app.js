@@ -104,6 +104,7 @@ app.get('/api/walkers/summary', async (req, res) => {
 app.use(express.static(path.join(__dirname, 'public')));
 
 // start the server
-console.Console.log(`Dog Walking Service API listening on port ${}`)
+console.Console.log(`Dog Walking Service API listening on port ${port}`);
+console.loh
 
 module.exports=app;
