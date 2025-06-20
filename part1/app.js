@@ -86,6 +86,7 @@ app.get('/api/walkers/summary', async (req, res) => {
             ORDER BY u.username
             `);
 
-            // convert numeric s
+            // convert numeric strings to numbers for consistency
+            const formattedRows=rows
     }
 });
