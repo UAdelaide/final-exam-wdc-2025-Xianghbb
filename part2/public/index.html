@@ -58,12 +58,8 @@
             error.value=err.message;
           }
         }
-        return {email, password, err}
+        return { email, password, error, submitLogin };
       }
-      data() {
-        return {
-          message: 'Welcome to the Dog Walking Service!'
-        };
       }
     }).mount('#app');
   </script>
