@@ -82,10 +82,6 @@
           loadDogsWithPhotos();
         });
 
-        return {
-          dogsWithPhotos
-        };
-
         async function submitLogin() {
           try {
             const res = await fetch('/api/users/login', {
