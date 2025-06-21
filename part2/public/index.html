@@ -48,9 +48,9 @@
             if (!res.ok) throw new Error(data.error || 'Login failed');
 
             if (data.user.role === 'owner') {
-              window.location.herf = 'owner-dashboard.html';
+              window.location.href = 'owner-dashboard.html';
             } else if (data.user.role === 'walker') {
-              window.location.herf = 'walker-dashboard.html';
+              window.location.href = 'walker-dashboard.html';
             } else {
               throw new Error('Unknow role');
             }
