@@ -58,6 +58,10 @@
         const error = ref('');
         const dogsWithPhotos = ref([]);
 
+        async function loadDogs(params) {
+          
+        }
+
         async function submitLogin() {
           try {
             const res = await fetch('/api/users/login', {
