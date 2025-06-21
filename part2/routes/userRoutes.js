@@ -63,7 +63,11 @@ router.get('/me/dogs', async (req, res) => {
   if (!req.session.user || req.session.user.role !== 'owner') {
     return res.status(401).json({ error: 'Unauthorized' });
   }
-  const ownerId=req.session.user.user_id
+  const ownerId=req.session.user.user_id;
+
+  try {
+    const [rows]=await db
+  }
 })
 
 // post logout by desytoying session
