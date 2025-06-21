@@ -58,6 +58,8 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// get all dogs owned by t
+
 // post logout by desytoying session
 router.post('/logout', (req, res) => {
   req.session.destroy((err) => {
