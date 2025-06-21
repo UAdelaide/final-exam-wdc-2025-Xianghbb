@@ -61,7 +61,8 @@ router.post('/login', async (req, res) => {
 // get all dogs in the database
 router.get('/dogs', async (req, res) => {
   try {
-    const [rows]=await db.query
+    const [rows]=await db.query('SELECT * FROM Dogs');
+    res.json(rows);
   }
 })
 
