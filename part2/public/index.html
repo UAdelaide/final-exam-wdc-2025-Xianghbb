@@ -66,6 +66,8 @@
             const enrichedDogs=await Promise.all(
               dogs.map(async (dog) => {
                 const photoRes=await fetch('https://dog.ceo/api/breeds/image/random');
+                const photoData=await photoRes.json();
+                
               })
             )
           }
