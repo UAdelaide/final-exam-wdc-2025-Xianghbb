@@ -56,6 +56,8 @@
             if (!res.ok) throw new Error('Not logged in');
             const data=await res.json();
             userId.value=data.user_id;
+          } catch (err) {
+            error.value=err.message;
           }
         }
 
