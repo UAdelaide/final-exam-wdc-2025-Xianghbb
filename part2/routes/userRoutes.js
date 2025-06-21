@@ -59,7 +59,7 @@ router.post('/login', async (req, res) => {
 });
 
 // get all dogs owned by the currently logged-in owner
-router.get
+router.get('/me/dogs', async (req, res) => )
 
 // post logout by desytoying session
 router.post('/logout', (req, res) => {
