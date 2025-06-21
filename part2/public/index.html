@@ -78,7 +78,9 @@
             console.error('Failed to load dogs or photos', err);
           }
         }
-        onMoun
+        onMounted(() => {
+          loadDogsWithPhotos
+        })
 
         async function submitLogin() {
           try {
