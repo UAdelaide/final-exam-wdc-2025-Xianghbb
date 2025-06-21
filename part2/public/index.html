@@ -60,7 +60,7 @@
 
         async function loadDogsWithPhotos() {
           try {
-            const res = await fetch('/api/dogs');
+            const res = await fetch('/api/usersdogs');
             const dogs = await res.json();
 
             const enrichedDogs = await Promise.all(
