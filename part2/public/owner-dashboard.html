@@ -101,7 +101,8 @@
 
         async function loadDogs() {
           try{
-            const res=await fetch('/api/users/me/d')
+            const res=await fetch('/api/users/me/dogs');
+            if (!res.ok) throw mew
           }
 
         }
