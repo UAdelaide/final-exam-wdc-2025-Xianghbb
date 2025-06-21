@@ -91,7 +91,7 @@
 
         async function logout() {
           await fetch('/api/users/logout', { method: 'POST' });
-          window
+          window.location.href='index.html'
         }
 
         async function submitWalkRequest() {
