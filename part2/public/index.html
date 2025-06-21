@@ -73,8 +73,8 @@
                 };
               })
             );
-            dogsWithPhotos.value=enrichedDogs
-          }
+            dogsWithPhotos.value=enrichedDogs;
+          } catch error('Failed to load dogs or photos', err)
         };
 
         async function submitLogin() {
