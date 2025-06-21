@@ -80,7 +80,11 @@
         }
         onMounted(() => {
           loadDogsWithPhotos();
-        })
+        });
+
+        return {
+          dogsWithPhotos
+        };
 
         async function submitLogin() {
           try {
