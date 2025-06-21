@@ -61,7 +61,9 @@
         async function loadDogsWithPhotos() {
           try {
             const res=await fetch('/api/dogs');
-            const dogs=await
+            const dogs=await res.json();
+
+            
           }
         }
 
