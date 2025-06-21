@@ -59,7 +59,9 @@ router.post('/login', async (req, res) => {
 });
 
 // get all dogs in the database
-router.get('')
+router.get('/dogs', async (req, res) => {
+  try
+})
 
 // get all dogs owned by the currently logged-in owner
 router.get('/me/dogs', async (req, res) => {
