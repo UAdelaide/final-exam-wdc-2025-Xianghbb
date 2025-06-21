@@ -73,9 +73,9 @@
                 };
               })
             );
-            dogsWithPhotos.value=enrichedDogs;
+            dogsWithPhotos.value = enrichedDogs;
           } catch (err) {
-            conserror('Failed to load dogs or photos', err);
+            console.error('Failed to load dogs or photos', err);
           }
         }
 
