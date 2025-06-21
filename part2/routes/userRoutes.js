@@ -71,7 +71,9 @@ router.get('/me/dogs', async (req, res) => {
       `, [ownerId]);
 
       res.json(rows);
-  } catch (erro)
+  } catch (error) {
+    res.status(500).json({ error:''})
+  }
 })
 
 // post logout by desytoying session
