@@ -60,7 +60,9 @@ router.post('/login', async (req, res) => {
 
 // get all dogs in the database
 router.get('/dogs', async (req, res) => {
-  try
+  try {
+    const [rows]=await db.query
+  }
 })
 
 // get all dogs owned by the currently logged-in owner
