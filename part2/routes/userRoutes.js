@@ -72,9 +72,9 @@ router.get('/me/dogs', async (req, res) => {
 
       res.json(rows);
   } catch (error) {
-    res.status(500).json({ error:''})
+    res.status(500).json({ error: 'Failed to fetch dogs' });
   }
-})
+});
 
 // post logout by desytoying session
 router.post('/logout', (req, res) => {
