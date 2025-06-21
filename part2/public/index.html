@@ -69,11 +69,12 @@
                 const photoData=await photoRes.json();
                 return {
                   ...dog,
-                }
+                  photo: photoData.message
+                };
               })
-            )
+            );
           }
-        }
+        };
 
         async function submitLogin() {
           try {
