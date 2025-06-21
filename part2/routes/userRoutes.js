@@ -57,6 +57,6 @@ router.post('/login', async (req, res) => {
 });
 
 // post logout by desytoying session
-
+router.post('')
 
 module.exports = router;
