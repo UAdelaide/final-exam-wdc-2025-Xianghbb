@@ -63,7 +63,9 @@
             const res=await fetch('/api/dogs');
             const dogs=await res.json();
 
-            const enrichedDogs=await Promise.all()
+            const enrichedDogs=await Promise.all(
+              dogs.map(async (dph))
+            )
           }
         }
 
