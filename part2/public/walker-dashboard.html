@@ -58,7 +58,7 @@
 
         async function logout() {
           await fetch('/api/users/logout', { method:'POST' });
-          window.location.href
+          window.location.href='index.html';
         }
 
         async function applyToWalk(requestId) {
@@ -88,6 +88,7 @@
           walks,
           message,
           error,
+          
           applyToWalk
         };
       }
