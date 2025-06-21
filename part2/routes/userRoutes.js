@@ -60,7 +60,9 @@ router.post('/login', async (req, res) => {
 
 // get all dogs owned by the currently logged-in owner
 router.get('/me/dogs', async (req, res) => {
-  if (!req.session.user || req)
+  if (!req.session.user || req.session.user.role !== 'owner') {
+    return res.status
+  }
 })
 
 // post logout by desytoying session
