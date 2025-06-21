@@ -50,6 +50,10 @@
         const error = ref('');
         const userId = ref(null);
 
+        async function getCurrentUser() {
+          
+        }
+
         async function loadWalkRequests() {
           try {
             const res = await fetch('/api/walks');
