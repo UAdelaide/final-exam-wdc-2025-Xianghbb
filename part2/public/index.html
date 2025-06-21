@@ -27,8 +27,6 @@
     </form>
     <div v-if="error" class="alert alert-danger">{{ error }}</div>
 
-    
-  </div>
   <h2 class="mt-5">All Registered Dogs</h2>
   <table class="table table-bordered">
     <thead>
@@ -50,6 +48,8 @@
       </tr>
     </tbody>
   </table>
+  </div>
+
 
   <script>
     const { createApp, ref, onMounted } = Vue;
