@@ -64,9 +64,9 @@ router.get('/dogs', async (req, res) => {
     const [rows]=await db.query('SELECT * FROM Dogs');
     res.json(rows);
   } catch (error) {
-    res.status(500).json({})
+    res.status(500).json({ error: 'Failed to fetch all dogs' });
   }
-})
+});
 
 // get all dogs owned by the currently logged-in owner
 router.get('/me/dogs', async (req, res) => {
